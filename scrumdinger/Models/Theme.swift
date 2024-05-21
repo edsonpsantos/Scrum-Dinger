@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Theme: String {
+enum Theme: String, CaseIterable, Identifiable {
     case customBubblegum
     case customButtercup
     case customIndigo
@@ -56,25 +56,29 @@ enum Theme: String {
         case .customYellow: return "Yellow"
         }
     }
+   
+    var id: String {
+        name
+    }
     
-    var alias: String {
-            switch self {
-            case .customBubblegum: return "Bubblegum"
-            case .customButtercup: return "Buttercup"
-            case .customIndigo: return "Indigo"
-            case .customLavender: return "Lavender"
-            case .customMagenta: return "Magenta"
-            case .customNavy: return "Navy"
-            case .customOrange: return "Orange"
-            case .customOxblood: return "Oxblood"
-            case .customPeriwinkle: return "Periwinkle"
-            case .customPoppy: return "Poppy"
-            case .customPurple: return "Purple"
-            case .customSeafoam: return "Seafoam"
-            case .customSky: return "Sky"
-            case .customTan: return "Tan"
-            case .customTeal: return "Teal"
-            case .customYellow: return "Yellow"
-            }
-        }
+//    var alias: String {
+//            switch self {
+//            case .customBubblegum: return "Bubblegum"
+//            case .customButtercup: return "Buttercup"
+//            case .customIndigo: return "Indigo"
+//            case .customLavender: return "Lavender"
+//            case .customMagenta: return "Magenta"
+//            case .customNavy: return "Navy"
+//            case .customOrange: return "Orange"
+//            case .customOxblood: return "Oxblood"
+//            case .customPeriwinkle: return "Periwinkle"
+//            case .customPoppy: return "Poppy"
+//            case .customPurple: return "Purple"
+//            case .customSeafoam: return "Seafoam"
+//            case .customSky: return "Sky"
+//            case .customTan: return "Tan"
+//            case .customTeal: return "Teal"
+//            case .customYellow: return "Yellow"
+//            }
+//        }
 }
