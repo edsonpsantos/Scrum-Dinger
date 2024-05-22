@@ -12,14 +12,10 @@ struct MeetingView: View {
     
     @Binding var scrum: DailyScrum
     @StateObject var scrumTimer = ScrumTimer()
+//    @StateObject var speechRecognizer = SpeechRecognizer()
+    @State private var isRecording = false
     
     private var player: AVPlayer { AVPlayer.sharedDingPlayer }
-
-    fileprivate func endScrum() {
-        scrumTimer.stopScrum()
-        let newHistory = History(attendee: scrum.attendees)
-        scrum.history.insert(newHistory, at:0)
-    }
     
     fileprivate func startScrum(){
         scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes, attendees: scrum.attendees)
@@ -27,7 +23,19 @@ struct MeetingView: View {
             player.seek(to: .zero)
             player.play()
         }
+//        speechRecognizer.resetTranscript()
+//        speechRecognizer.startTranscribing()
+        isRecording = true
         scrumTimer.startScrum()
+    }
+    
+    fileprivate func endScrum() {
+        scrumTimer.stopScrum()
+//        speechRecognizer.stopTranscribing()
+        isRecording = false
+        
+        let newHistory = History(attendee: scrum.attendees /*, transcript: speechRecognizer.transcript*/)
+        scrum.history.insert(newHistory, at:0)
     }
     
     var body: some View {
@@ -39,7 +47,7 @@ struct MeetingView: View {
             VStack {
                 MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed, secondsRemaining: scrumTimer.secondsRemaining, theme: scrum.theme)
   
-                MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
+                MeetingTimerView(speakers: scrumTimer.speakers, isRecording: isRecording, theme: scrum.theme)
                 
                 MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
            
