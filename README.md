@@ -33,11 +33,11 @@ Make sure that you install the latest version of Xcode.
 The project was designed by Apple
 
 ## Screens
-![Home Screen](https://github.com/edsonpsantos/images/ios_images/ScrumDinger/HomeScreen.png)
-![Create Scrum Meeting Screen](https://github.com/edsonpsantos/images/ios_images/ScrumDinger/CreateScrumMeeting.png)
-![Detail Meeting Screen](https://github.com/edsonpsantos/images/ios_images/ScrumDinger/DetailMeeting.png)
-![History Meeting Screen](https://github.com/edsonpsantos/images/ios_images/ScrumDinger/HistoryMeeting.png)
-![Meeting Screen](https://github.com/edsonpsantos/images/ios_images/ScrumDinger/Meeting.png)
+![Home Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/ScrumDinger/HomeScreen.png)
+![Create Scrum Meeting Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/ScrumDinger/CreateScrumMeeting.png)
+![Detail Meeting Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/ScrumDinger/DetailMeeting.png)
+![History Meeting Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/ScrumDinger/HistoryMeeting.png)
+![Meeting Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/ScrumDinger/Meeting.png)
 
 
 https://github.com/edsonpsantos/Scrum-Dinger/assets/24628289/8df0c229-9be9-49cb-bb4c-75b5970029f1
